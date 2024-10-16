@@ -1,0 +1,11 @@
+Type,ProductId,ProductName,ProductPrice,ProductStock,IosVersion,ScreenSize,Ram,Storage,AndroidVersion,CameraZoom,YearOfManufacture
+Ipad,IPD001,iPad Air,599.99,20,IOS 14.6,10.9,,,,,
+Ipad,IPD002,iPad Pro,799.99,15,IOS 15,12.9,,,,,
+Ipad,IPD003,iPad Mini,399.99,30,IOS 14.4,7.9,,,,,
+Iphone,IPH001,iPhone 13,999.99,10,IOS 15,,4GB,128GB,,,
+Iphone,IPH002,iPhone 14,1099.99,8,IOS 15.1,,6GB,256GB,,,
+SamSung,SAMS001,Samsung Galaxy S21,799.99,18,,,,,11,30x,2021
+SamSung,SAMS002,Samsung Galaxy S20,699.99,25,,,,,10,10x,2020
+SamSung,SAMS003,Samsung Galaxy Note 20,999.99,12,,,,,10,20x,2020
+SamSung,SAMS004,Samsung Galaxy A52,599.99,20,,,,,11,5x,2021
+Tablet,TAB001,Samsung Galaxy Tab S7,649.99,30,,11,,,11,,

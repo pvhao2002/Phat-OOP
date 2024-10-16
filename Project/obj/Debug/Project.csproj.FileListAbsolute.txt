@@ -1,0 +1,7 @@
+D:\workspace\phat\Project\Project\bin\Debug\Project.exe.config
+D:\workspace\phat\Project\Project\bin\Debug\Project.exe
+D:\workspace\phat\Project\Project\bin\Debug\Project.pdb
+D:\workspace\phat\Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+D:\workspace\phat\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\workspace\phat\Project\Project\obj\Debug\Project.exe
+D:\workspace\phat\Project\Project\obj\Debug\Project.pdb

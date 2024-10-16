@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Project
+namespace Project.Model
 {
     public abstract class Device
     {
@@ -51,10 +51,14 @@ namespace Project
             ProductStock = productStock;
         }
 
-        public virtual void Input()
+        public virtual void Input(bool isEdit = false)
         {
-            Console.Write("Nhập mã sản phẩm: ");
-            ProductId = Console.ReadLine();
+            if (!isEdit)
+            {
+                Console.Write("Nhập mã sản phẩm: ");
+                ProductId = Console.ReadLine();
+            }
+
             Console.Write("Nhập tên sản phẩm: ");
             ProductName = Console.ReadLine();
             Console.Write("Nhập giá sản phẩm: ");
@@ -72,23 +76,23 @@ namespace Project
             Console.WriteLine("Số lượng sản phẩm: " + ProductStock);
         }
 
-        // get format string and array of object
-
-        public virtual object[] GetTitle()
+        public string GetFormatString()
         {
-            return new object[] { "Mã SP", "Tên SP", "Giá", "Số lượng" };
+            return "{0,-10} {1,-12} {2,-30} {3,-12} {4,-12} {5,-12} {6,-12} {7, -12} {8, -12} {9, -16} {10, -16}";
         }
 
-        public virtual string GetFormatString()
+        public object[] GetTitle()
         {
-            return "{0,-10} {1,-20} {2,-10} {3,-10}";
+            return new object[]
+            {
+                "Loại", "Mã sản phẩm", "Tên sản phẩm", "Giá", "Số lượng",
+                "OS", "Màn hình", "Ram", "Bộ nhớ", "Camera Zoom", "Năm sản xuất"
+            };
         }
 
         public virtual object[] GetObjectArray()
         {
             return new object[] { ProductId, ProductName, ProductPrice, ProductStock };
         }
-
-        public abstract Device Clone();
     }
 }

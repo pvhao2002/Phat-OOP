@@ -1,0 +1,21 @@
+Type,ProductId,ProductName,ProductPrice,ProductStock,IosVersion,ScreenSize,Ram,Storage,AndroidVersion,CameraZoom,YearOfManufacture
+Ipad,IPD001,iPad Air,599.99,20,14.6,10.9,,,,,
+Ipad,IPD002,iPad Pro,799.99,15,15,12.9,,,,,
+Ipad,IPD003,iPad Mini,399.99,30,14.4,7.9,,,,,
+Ipad,IPD004,iPad 9,329.99,50,14.8,10.2,,,,,
+Ipad,IPD005,iPad 10,479.99,25,15.1,10.9,,,,,
+Iphone,IPH001,iPhone 13,999.99,10,15,,4GB,128GB,,,
+Iphone,IPH002,iPhone 14,1099.99,8,15.1,,6GB,256GB,,,
+Iphone,IPH003,iPhone SE,399.99,20,14.6,,3GB,64GB,,,
+Iphone,IPH004,iPhone 12,699.99,15,14.4,,4GB,128GB,,,
+Iphone,IPH005,iPhone 11,499.99,12,14.3,,4GB,64GB,,,
+SamSung,SAMS001,Samsung Galaxy S21,799.99,18,,,,,11,30x,2021
+SamSung,SAMS002,Samsung Galaxy S20,699.99,25,,,,,10,10x,2020
+SamSung,SAMS003,Samsung Galaxy Note 20,999.99,12,,,,,10,20x,2020
+SamSung,SAMS004,Samsung Galaxy A52,599.99,20,,,,,11,5x,2021
+SamSung,SAMS005,Samsung Galaxy Z Flip,749.99,10,,,,,12,10x,2021
+Tablet,TAB001,Samsung Galaxy Tab S7,649.99,30,,11,,,11,,
+Tablet,TAB002,Samsung Galaxy Tab A7,349.99,40,,10.4,,,10,,
+Tablet,TAB003,Samsung Galaxy Tab S6,299.99,20,,10.5,,,9,,
+Tablet,TAB004,Samsung Galaxy Tab S6 Lite,399.99,15,,10.5,,,10,,
+Tablet,TAB005,Samsung Galaxy Tab S4,299.99,18,,10.5,,,9,,
