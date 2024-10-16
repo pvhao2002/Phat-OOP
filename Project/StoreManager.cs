@@ -8,17 +8,12 @@ namespace Project
     {
         private List<Device> List { get; set; } = new List<Device>();
 
-        public void Add(Device device)
+        public bool Add(Device device)
         {
-            var isExist = List.Exists(x =>
-                string.Compare(x.ProductId, device.ProductId, StringComparison.OrdinalIgnoreCase) == 0);
-            if (isExist)
-            {
-                Console.WriteLine("Mã sản phẩm đã tồn tại");
-                return;
-            }
-
+            var isExist = Get(device.ProductId);
+            if (isExist != null) return false;
             List.Add(device);
+            return true;
         }
 
         public void Display()
@@ -37,17 +32,63 @@ namespace Project
 
         public void Search(string name)
         {
-            throw new System.NotImplementedException();
+            var listSearch = List.Where(item => item.ProductName.ToLower().Contains(name.ToLower())).ToList();
+            if (listSearch.Count == 0)
+            {
+                Console.WriteLine("Không tìm thấy sản phẩm");
+                return;
+            }
+
+            Console.WriteLine("Danh sách sản phẩm");
+            var first = listSearch.First();
+            Console.WriteLine(first.GetFormatString(), first.GetTitle());
+            listSearch.ForEach(x => Console.WriteLine(x.GetFormatString(), x.GetObjectArray()));
         }
 
-        public void Delete(string deviceId)
+        public bool Delete(string deviceId)
         {
-            throw new System.NotImplementedException();
+            var device = Get(deviceId);
+            if (device != null)
+            {
+                List.Remove(device);
+                return true;
+            }
+            return false;
         }
 
-        public void Update(Device device)
+        public bool Update(Device device)
         {
-            throw new System.NotImplementedException();
+            var obj = Get(device.ProductId);
+            if (obj != null)
+            {
+                if (device is Ipad)
+                {
+                    obj = (Ipad)device;
+                }
+                else if (device is Mobile)
+                {
+                    obj = (Mobile)device;
+                }
+                else if (device is Tablet)
+                {
+                    obj = (Tablet)device;
+                }
+                else if (device is SamSung)
+                {
+                    obj = (SamSung)device;
+                }
+                else if (device is Iphone)
+                {
+                    obj = (Iphone)device;
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public Device Get(string deviceId)
+        {
+            return List.FirstOrDefault(item => string.Compare(item.ProductId, deviceId, StringComparison.OrdinalIgnoreCase) == 0);
         }
     }
 }

@@ -88,5 +88,7 @@ namespace Project
         {
             return new object[] { ProductId, ProductName, ProductPrice, ProductStock };
         }
+
+        public abstract Device Clone();
     }
 }

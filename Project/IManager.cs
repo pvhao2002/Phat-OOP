@@ -2,10 +2,12 @@
 {
     public interface IManager
     {
-        void Add(Device device);
+        bool Add(Device device);
         void Display();
         void Search(string name);
-        void Delete(string deviceId);
-        void Update(Device device);
+        bool Delete(string deviceId);
+        bool Update(Device device);
+
+        Device Get(string deviceId);
     }
 }
